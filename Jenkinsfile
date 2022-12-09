@@ -21,6 +21,8 @@ pipeline {
             }
             steps {
                 sh 'printenv'
+                echo '${CC}'
+                echo '${EXIT_STATUS}'
             }
         }
     }
