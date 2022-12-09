@@ -1,11 +1,26 @@
 //Jenkinsfile (Declarative Pipeline)
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'golang:1.19.1-alpine' } }
+    agent any 
+    environment {
+        // Using returnStdout
+        CC = """${sh(
+                returnStdout: true,
+                script: 'echo "clang"'
+            )}""" 
+        // Using returnStatus
+        EXIT_STATUS = """${sh(
+                returnStatus: true,
+                script: 'exit 1'
+            )}"""
+    }
     stages {
-        stage('build') {
+        stage('Example') {
+            environment {
+                DEBUG_FLAGS = '-g'
+            }
             steps {
-                sh 'go version'
+                sh 'printenv'
             }
         }
     }
