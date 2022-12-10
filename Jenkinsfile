@@ -21,8 +21,8 @@ pipeline {
             }
             steps {
                 sh 'printenv'
-                echo '$CC'
-                sh 'echo "${EXIT_STATUS}"'
+                echo "$CC"
+                sh ('echo ${EXIT_STATUS}')
                 echo "${BUILD_ID}"
             }
         }
