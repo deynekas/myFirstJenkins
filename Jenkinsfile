@@ -2,6 +2,7 @@
 //test
 //hello
 //test2
+//test4
 /* Requires the Docker Pipeline plugin */
 pipeline {
     agent any 
