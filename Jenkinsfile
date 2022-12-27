@@ -1,6 +1,7 @@
 //Jenkinsfile (Declarative Pipeline)
 //test
 //hello
+//test2
 /* Requires the Docker Pipeline plugin */
 pipeline {
     agent any 
