@@ -4,6 +4,7 @@
 //test2
 //test4
 //test5
+//test6
 /* Requires the Docker Pipeline plugin */
 pipeline {
     agent any 
