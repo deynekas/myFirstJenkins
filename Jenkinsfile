@@ -25,7 +25,9 @@ pipeline {
                 echo "$CC"
                 sh ('echo ${EXIT_STATUS}')
                 echo "${BUILD_ID}"
+                echo "mychange"
             }
         }
     }
 }
+//test pr
